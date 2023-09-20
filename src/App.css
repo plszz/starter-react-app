@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+/* Reset some default styles */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Apply Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style the moderators list */
+.mods-list {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.mods-list-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mods-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
+
+.mod-pfp img {
+  border-radius: 25px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.mod-name {
+  font-size: 18px;
+}
+
+/* Add any additional styling you need here */
