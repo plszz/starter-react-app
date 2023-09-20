@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './App.css';
-import ModsList from './components/ModsModular';
+import { ModsList, selectFile } from './components/ModsModular';
 import modsData from "./mods.json";
 
 selectFile("./mods.json");
