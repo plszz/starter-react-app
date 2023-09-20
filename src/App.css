@@ -13,7 +13,7 @@ body, ul, li {
 
 /* Style the moderators list */
 .mods-list {
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ body, ul, li {
 .mods-list-item {
   display: flex;
   align-items: center;
-  margin: 10px 0; /* Add spacing between items */
+  margin: 20px 0; /* Add spacing between items */
   padding: 20px;
   background-color: transparent;
   border: 2px solid #fff; /* Outline from the outside */
