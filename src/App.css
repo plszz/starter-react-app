@@ -15,15 +15,18 @@ body, ul, li {
 .mods-list {
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .mods-list-item {
+  display: flex;
+  align-items: center;
   margin: 10px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
+  border: 2px solid #fff; /* Outline from the outside */
   border-radius: 25px;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
@@ -33,15 +36,28 @@ body, ul, li {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.mod-pfp img {
+.mods-list-item img {
   border-radius: 25px;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.mod-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
 }
 
 .mod-name {
   font-size: 18px;
+  font-weight: bold;
+}
+
+.mod-username {
+  font-size: 14px;
+  opacity: 0.7;
 }
 
 /* Add any additional styling you need here */
