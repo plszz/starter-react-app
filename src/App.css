@@ -16,7 +16,6 @@ body, ul, li {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -27,17 +26,18 @@ body, ul, li {
   padding: 10px;
   background-color: transparent;
   border: 2px solid #fff; /* Outline from the outside */
-  border-radius: 25px;
+  border-radius: 10px; /* Less radius by default */
   text-align: center;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* Added transition for border radius */
 }
 
 .mods-list-item:hover {
   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 25px; /* More radius on hover */
 }
 
 .mods-list-item img {
-  border-radius: 25px;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   margin-right: 10px;
