@@ -1,23 +1,10 @@
 // App.js
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
-import axios from 'axios';
+import modsData from './mods.json'; // Import the JSON data directly
 
 function App() {
-  const [modsData, setModsData] = useState({});
-
-  useEffect(() => {
-    // Fetch data from mods.json
-    axios.get('./mods.json')
-      .then(response => {
-        setModsData(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching mods data:', error);
-      });
-  }, []);
-
   return (
     <div className="container">
       <div className="header">
