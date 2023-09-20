@@ -1,6 +1,6 @@
 
 import axios from 'axios';
-import './App.css'; // You will create this CSS file for Dark Mode styling
+import './App.css';
 import modsData from './mods.json';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         axios
           .get(`https://discord.com/api/v10/users/${discordId}`, {
             headers: {
-              Authorization: `Bot YOUR_DISCORD_BOT_TOKEN`, // Replace with your Discord bot token
+              Authorization: `Bot MTE0MDU1MDU3NTIxMDExMDk5OA.GHGYb7.t7xcJLuUTqxoKMZ43QnLloehRNZsPOJLhBvVtQ`,
             },
           })
           .then((response) => {
