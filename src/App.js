@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from mods.json
-    axios.get('mods.json')
+    axios.get('./mods.json')
       .then(response => {
         setModsData(response.data);
       })
