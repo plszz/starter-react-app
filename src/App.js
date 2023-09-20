@@ -3,7 +3,7 @@
 import React from 'react';
 import './App.css';
 import ModsList from './components/ModsModular';
-import "./mods.json"
+import modsData from "./mods.json";
 
 function App() {
   return (
