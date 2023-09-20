@@ -2,10 +2,7 @@
 
 import React from 'react';
 import './App.css';
-import ModsList from './grabber';
-import modsData from "./mods.json";
-
-
+import ModsList from './ModsList';
 
 function App() {
   return (
