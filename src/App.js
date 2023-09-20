@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css'; // You will create this CSS file for Dark Mode styling
+import './App.css';
 import modsData from './mods.json';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         axios
           .get(`https://discord.com/api/v10/users/${discordId}`, {
             headers: {
-              Authorization: `Bot ${process.env.TOKENBOT}`, // Replace with your Discord bot token
+              Authorization: `Bot ${process.env.TOKENBOT}`, 
             },
           })
           .then((response) => {
@@ -36,10 +36,10 @@ function App() {
       <ul className="mods-list">
         {Object.entries(modsData).map(([modName, discordId]) => (
           <li key={discordId} className="mods-list-item">
-            <img src={discordAvatars[discordId]} alt={`${modName}'s Avatar`} />
+            <img src={discordAvatars[discordId]} alt={`${modName}'s Avatar`} className="mod-avatar" />
             <div className="mod-info">
               <div className="mod-name">{modName}</div>
-              <div className="mod-username">(@{discordId})</div>
+              <div className="mod-username">@{discordId}</div>
             </div>
           </li>
         ))}
