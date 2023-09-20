@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css';
+import './App.css'; // You will create this CSS file for Dark Mode styling
 import modsData from './mods.json';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         axios
           .get(`https://discord.com/api/v10/users/${discordId}`, {
             headers: {
-              Authorization: `Bot Testing`,
+              Authorization: `Bot ${process.env.TOKENBOT}`, // Replace with your Discord bot token
             },
           })
           .then((response) => {
@@ -49,4 +49,3 @@ function App() {
 }
 
 export default App;
-
