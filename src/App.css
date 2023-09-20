@@ -14,9 +14,9 @@ body, ul, li {
 /* Style the moderators list */
 .mods-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Space between items */
   height: 100vh;
-  width: 100vw;
   padding: 0; /* Remove padding to take up full width */
   margin: 0; /* Remove margin to take up full width */
 }
@@ -24,8 +24,9 @@ body, ul, li {
 .mods-list-item {
   display: flex;
   align-items: center;
-  height: 100%; /* Each item takes up 100% height */
-  padding: 10px;
+  width: calc(33.33% - 20px); /* Three items per row with spacing between them */
+  margin: 10px; /* Add spacing between items */
+  padding: 20px;
   background-color: transparent;
   border: 2px solid #fff; /* Outline from the outside */
   border-radius: 10px; /* Less radius by default */
@@ -40,15 +41,15 @@ body, ul, li {
 
 .mods-list-item img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 .mod-info {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   justify-content: center;
 }
 
@@ -62,4 +63,4 @@ body, ul, li {
   opacity: 0.7;
 }
 
-/* new update */
+/* and new */
