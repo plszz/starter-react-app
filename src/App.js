@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import modsData from './mods.json';
@@ -12,7 +12,7 @@ function App() {
         axios
           .get(`https://discord.com/api/v10/users/${discordId}`, {
             headers: {
-              Authorization: `Bot MTE0MDU1MDU3NTIxMDExMDk5OA.GHGYb7.t7xcJLuUTqxoKMZ43QnLloehRNZsPOJLhBvVtQ`,
+              Authorization: `Bot Testing`,
             },
           })
           .then((response) => {
@@ -49,3 +49,4 @@ function App() {
 }
 
 export default App;
+
