@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const ModsList = () => {
   const [modsData, setModsData] = useState({});
+  const [selectFile, setFile] = setState("")
 
   useEffect(() => {
     // Fetch data from mods.json
