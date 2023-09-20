@@ -5,6 +5,8 @@ import './App.css';
 import ModsList from './components/ModsModular';
 import modsData from "./mods.json";
 
+selectFile("./mods.json");
+
 function App() {
   return (
     <div className="container">
