@@ -52,3 +52,22 @@ body {
   display: block;
   margin-right: 10px;
 }
+
+.big {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.mod-info {
+  margin-left: 10px;
+}
+
+.mod-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.mod-username {
+  margin: 0;
+}
