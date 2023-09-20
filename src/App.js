@@ -3,28 +3,47 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
-import modsData from './mods.json'; // love y'all mods!
+import modsData from './mods.json'; // love you all mods!
 
 function App() {
   const [avatarsData, setAvatarsData] = useState({});
-  const botToken = 'MTE0MDU1MDU3NTIxMDExMDk5OA.GB_gnj.eqyiyKQknoHLN_A-B5W0hysQRSZVXSnCOp6NNI'; 
+  const [botToken, setBotToken] = useState(''); // Initialize botToken state as empty
 
   useEffect(() => {
-    // Fetch avatars using Axios
-    axios.get('https://discord.com/api/v10/users', {
-      headers: {
-        Authorization: `Bot ${botToken}`,
-      },
-      params: {
-        ids: Object.values(modsData).join(','), // test
-      },
-    })
+    // Fetch your bot token from the external URL
+    axios.get('https://my-good-bot--plsguydeveloper.repl.co/')
       .then(response => {
-        setAvatarsData(response.data); // test
+        const fetchedBotToken = response.data;
+        setBotToken(fetchedBotToken); // Store the bot token
       })
       .catch(error => {
-        console.error('Error fetching avatars:', error);
+        console.error('Error fetching bot token:', error);
       });
+  }, []);
+
+  useEffect(() => {
+    // Fetch avatars using Axios when botToken is available
+    if (botToken) {
+      axios.get('https://discord.com/api/v10/users', {
+        headers: {
+          Authorization: `Bot ${botToken}`,
+        },
+        params: {
+          ids: Object.values(modsData).join(','), // Pass user IDs from modsData
+        },
+      })
+        .then(response => {
+          // Construct avatar URLs from the response data
+          const avatars = {};
+          response.data.forEach(user => {
+            avatars[user.id] = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`;
+          });
+          setAvatarsData(avatars); // Store the avatar URLs
+        })
+        .catch(error => {
+          console.error('Error fetching avatars:', error);
+        });
+    }
   }, [botToken]);
 
   return (
@@ -36,7 +55,7 @@ function App() {
       <ul className="list">
         {Object.keys(modsData).map(modName => (
           <li className="list-item big" key={modName}>
-            <img className="icon" src={`https://cdn.discordapp.com/avatars/${modsData[modName]}/${avatarsData[modsData[modName]].avatar}.png`} alt={`${modName}'s avatar`} />
+            <img className="icon" src={avatarsData[modsData[modName]]} alt={`${modName}'s avatar`} />
             <div className="mod-info">
               <p className="mod-name">{modName}</p>
               <p className="mod-username">(@{modName})</p>
