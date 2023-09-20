@@ -13,11 +13,10 @@ body, ul, li {
 
 /* Style the moderators list */
 .mods-list {
-  height: 100vh;
-  width: 100vh;
+  height: 200px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .mods-list-item {
