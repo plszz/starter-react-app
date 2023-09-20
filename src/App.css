@@ -52,11 +52,24 @@ body {
   display: block;
   margin-right: 10px;
 }
+
+
+
 .big {
   height: 150px;
   display: flex;
   align-items: center;
   margin-bottom: 20px; /* Add space between items */
+  background-color: #ffffff; /* Background color for the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the card */
+}
+
+.icon {
+  border: 2px solid #333; /* Border for the profile picture */
+  border-radius: 50%; /* Make the profile picture round */
+  width: 100px; /* Adjust the profile picture size */
+  height: 100px; /* Adjust the profile picture size */
 }
 
 .mod-info {
@@ -66,10 +79,12 @@ body {
 .mod-name {
   font-weight: bold;
   margin: 0;
+  font-size: 18px; /* Adjust the font size for the name */
 }
 
 .mod-username {
   margin: 0;
+  font-size: 16px; /* Adjust the font size for the username */
 }
 
 /* Responsive styles */
@@ -87,6 +102,19 @@ body {
 
   .big {
     height: 200px; /* Adjust height for small screens */
+  }
+
+  .icon {
+    width: 80px; /* Adjust profile picture size for small screens */
+    height: 80px; /* Adjust profile picture size for small screens */
+  }
+
+  .mod-name {
+    font-size: 16px; /* Adjust font size for small screens */
+  }
+
+  .mod-username {
+    font-size: 14px; /* Adjust font size for small screens */
   }
 }
 
