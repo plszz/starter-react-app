@@ -9,7 +9,7 @@ const ModsList = () => {
 
   useEffect(() => {
     // Fetch data from mods.json
-    axios.get('./mods.json')
+    axios.get({selectFile})
       .then(response => {
         setModsData(response.data);
       })
