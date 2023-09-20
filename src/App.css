@@ -52,47 +52,41 @@ body {
   display: block;
   margin-right: 10px;
 }
-
-/* App.css */
-
-/* ... (previous styles) */
-
 .big {
-  height: 150px; /* Set the height to 150px */
+  height: 150px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Create space between items */
-  margin-bottom: 10px; /* Add margin between items */
-  padding: 10px; /* Add padding for better spacing */
+  margin-bottom: 20px; /* Add space between items */
 }
 
 .mod-info {
-  flex: 1; /* Allow the name and username to fill available space */
-  margin-left: 10px;
-  text-align: left; /* Adjust text alignment */
+  margin-left: 20px; /* Add more space between the icon and info */
 }
 
 .mod-name {
   font-weight: bold;
   margin: 0;
-  font-size: 18px; /* Adjust font size */
 }
 
 .mod-username {
   margin: 0;
-  font-size: 16px; /* Adjust font size */
 }
 
-/* Make it responsive for all devices */
+/* Responsive styles */
 @media (max-width: 768px) {
   .list-item {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column; /* Stack items on small screens */
     align-items: center;
     text-align: center;
-    height: auto; /* Reset height for smaller screens */
   }
 
-  .icon {
-    margin-bottom: 10px; /* Add space between pfp and text */
+  .mod-info {
+    margin-left: 0; /* Reset margin for small screens */
+    margin-top: 10px; /* Add space between name and username */
+  }
+
+  .big {
+    height: 200px; /* Adjust height for small screens */
   }
 }
+
