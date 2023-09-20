@@ -13,19 +13,17 @@ body, ul, li {
 
 /* Style the moderators list */
 .mods-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Space between items */
   height: 100vh;
-  padding: 0; /* Remove padding to take up full width */
-  margin: 0; /* Remove margin to take up full width */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .mods-list-item {
   display: flex;
   align-items: center;
-  width: calc(33.33% - 20px); /* Three items per row with spacing between them */
-  margin: 10px; /* Add spacing between items */
+  margin: 10px 0; /* Add spacing between items */
   padding: 20px;
   background-color: transparent;
   border: 2px solid #fff; /* Outline from the outside */
@@ -43,13 +41,13 @@ body, ul, li {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin-bottom: 10px;
+  margin-right: 20px;
 }
 
 .mod-info {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   justify-content: center;
 }
 
@@ -63,4 +61,4 @@ body, ul, li {
   opacity: 0.7;
 }
 
-/* and new */
+/* try */
