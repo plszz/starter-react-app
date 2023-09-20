@@ -13,9 +13,12 @@ function App() {
       <h2>Live Room Mods:</h2>
       <ul className="list">
         {Object.keys(modsData).map(modName => (
-          <li className="list-item" key={modName}>
+          <li className="list-item big" key={modName}>
             <img className="icon" src={`https://discordapp.com/api/users/${modsData[modName]}/avatars/${modsData[modName]}.png`} alt={`${modName}'s avatar`} />
-            <a href={`https://kajiwoto.ai/u/@${modName}`}>{modName}</a>
+            <div className="mod-info">
+              <p className="mod-name">{modName}</p>
+              <p className="mod-username">(@{modName})</p>
+            </div>
           </li>
         ))}
       </ul>
