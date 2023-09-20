@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const ModsList = () => {
   const [modsData, setModsData] = useState({});
-  const [selectFile, setFile] = setState("");
+  const [selectFile, setFile] = useState("");
   
 
   useEffect(() => {
