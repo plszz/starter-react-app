@@ -1,64 +1,43 @@
-/* Reset some default styles */
-body, ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Apply Dark Mode */
-.dark-mode {
-  background-color: #222;
-  color: #fff;
-}
-
-/* Style the moderators list */
-.mods-list {
-  height: 150vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-.mods-list-item {
+/* Profile Card Styles */
+.profile-card {
+  width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
-  margin: 20px 0; /* Add spacing between items */
-  padding: 20px;
-  background-color: transparent;
-  border: 2px solid #fff; /* Outline from the outside */
-  border-radius: 10px; /* Less radius by default */
-  text-align: center;
-  transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* Added transition for border radius */
+  padding: 10px;
+  background-color: #ffffff; /* Background color */
+  border: 1px solid #ddd; /* Border color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
 }
 
-.mods-list-item:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 25px; /* More radius on hover */
-}
-
-.mods-list-item img {
+.profile-avatar {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
-.mod-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  justify-content: center;
+.profile-info {
+  flex: 1;
 }
 
-.mod-name {
-  font-size: 18px;
+.profile-name {
   font-weight: bold;
+  font-size: 16px;
 }
 
-.mod-username {
+.profile-username {
+  color: #666;
   font-size: 14px;
-  opacity: 0.7;
 }
 
-/* try */
+/* Usage Example 
+<div class="profile-card">
+  <img src="profile.jpg" alt="Profile" class="profile-avatar">
+  <div class="profile-info">
+    <div class="profile-name">Pls</div>
+    <div class="profile-username">@plsdev</div>
+  </div>
+</div>
+*/
