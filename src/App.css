@@ -58,7 +58,7 @@ body {
   height: 150px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Add space between items */
+  margin-bottom: 45px; /* Add space between items */
   background-color: #36393f; /* Background color for the card, similar to Discord */
   border-radius: 10px; /* Rounded corners for the card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the card */
