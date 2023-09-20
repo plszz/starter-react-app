@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './App.css';
-import { ModsList, selectFile } from './grabber';
+import ModsList from './grabber';
 import modsData from "./mods.json";
 
 
